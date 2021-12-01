@@ -19,14 +19,14 @@ def extract_edges_from_spacy(corpus: str,
     for snt in docs.sents:
         # extract edges
         edges = [(0 if t.dep_ == 'ROOT' else (t.head.i + 1), t.i + 1)
-                  for t in snt
-                  if isinstance(t.i, int)]
+                 for t in snt
+                 if isinstance(t.i, int)]
         # adjust ids
-        d = min([c for p,c in edges]) - 1
+        d = min([c for p, c in edges]) - 1
         edges = [(max(0, p - d), c - d) for p, c in edges]
         # store everything
-        all_edges.append( edges )
-        num_nodes.append( len(snt) + 1 )
+        all_edges.append(edges)
+        num_nodes.append(len(snt) + 1)
 
     # done
     return all_edges, num_nodes
@@ -48,8 +48,8 @@ def extract_edges_from_stanza(corpus: str,
         # extract edges
         edges = [(t.head, t.id) for t in snt.words if isinstance(t.id, int)]
         # store everything
-        all_edges.append( edges )
-        num_nodes.append( len(snt.words) + 1 )
+        all_edges.append(edges)
+        num_nodes.append(len(snt.words) + 1)
 
     # done
     return all_edges, num_nodes
@@ -73,8 +73,8 @@ def extract_edges_from_trankit(corpus: str,
                  for t in snt.get("tokens")
                  if isinstance(t.get("id"), int)]
         # store everything
-        all_edges.append( edges )
-        num_nodes.append( len(snt.get("tokens")) + 1 )
+        all_edges.append(edges)
+        num_nodes.append(len(snt.get("tokens")) + 1)
 
     # done
     return all_edges, num_nodes

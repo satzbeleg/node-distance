@@ -3,10 +3,18 @@ import numpy as np
 import itertools
 from typing import List, Optional
 
+
 # utility functions
-scale = lambda x: np.array(list(x)) / np.sum(list(x))
-is_leq_xmin = lambda x, xmin: False if xmin is None else x <= xmin
-is_geq_xmax = lambda x, xmax: False if xmax is None else x >= xmax
+def scale(x):
+    return np.array(list(x)) / np.sum(list(x))
+
+
+def is_leq_xmin(x, xmin):
+    return False if xmin is None else x <= xmin
+
+
+def is_geq_xmax(x, xmax):
+    return False if xmax is None else x >= xmax
 
 
 def to_distribution(cnt: Counter, xmin: int = 1, xmax: int = None):
