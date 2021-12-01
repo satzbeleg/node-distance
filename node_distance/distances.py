@@ -19,13 +19,15 @@ def node_token_distances_single(edges: List[Tuple[int, int]],
     # compute node distances and the corresponding token distances
     nodedist = []
     tokendist = []
+    indicies = []
     for i, row in pathlen.items():
         for j, val in row.items():
             if i > j:
                 nodedist.append(val)
                 tokendist.append(i - j)
+                indicies.append((i, j))
     # done
-    return nodedist, tokendist
+    return nodedist, tokendist, indicies
 
 
 def node_token_distances(all_edges: List[List[Tuple[int, int]]],
@@ -33,10 +35,11 @@ def node_token_distances(all_edges: List[List[Tuple[int, int]]],
                          cutoff: int = 25
                          ) -> (List[int], List[int]):
     """ Loop over each sentence to compute the shorted distance """
-    nodedist, tokendist = [], []
+    nodedist, tokendist, indicies = [], [], []
     for i in range(len(num_nodes)):
-        tmpnode, tmptok = node_token_distances_single(
+        tmpnode, tmptok, tmpidx = node_token_distances_single(
             all_edges[i], num_nodes[i], cutoff=cutoff)
-        nodedist.extend(tmpnode)
-        tokendist.extend(tmptok)
-    return nodedist, tokendist
+        nodedist.append(tmpnode)
+        tokendist.append(tmptok)
+        indicies.append(tmpidx)
+    return nodedist, tokendist, indicies

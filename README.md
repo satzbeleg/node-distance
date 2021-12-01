@@ -1,5 +1,4 @@
 [![PyPI version](https://badge.fury.io/py/node-distance.svg)](https://badge.fury.io/py/node-distance)
-[![Gitpod - Code Now](https://img.shields.io/badge/Gitpod-code%20now-blue.svg?longCache=true)](https://gitpod.io#https://github.com/satzbeleg/node-distance)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/satzbeleg/node-distance.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/node-distance/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/satzbeleg/node-distance.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/node-distance/context:python)
 
@@ -71,7 +70,12 @@ parent_id, node_id = edge
 ```
 
 ### Compute Shortest Paths between Nodes
+Compute node distances and the corresponding token distances
 
+```py
+import node_distance as nd
+nodedist, tokendist, indicies = nd.node_token_distances(all_edges, num_nodes, cutoff=25)
+```
 
 ### Histograms as Features
 

@@ -7,4 +7,4 @@ from .extract import (
     extract_edges_from_trankit
 )
 from .distances import node_token_distances
-from .distribution import nodedist_distribution, tokenvsnode_distribution
+from .distributions import nodedist_distribution, tokenvsnode_distribution
