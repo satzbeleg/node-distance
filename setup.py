@@ -20,7 +20,7 @@ def get_version(path):
 
 setuptools.setup(
     name='node-distance',
-    version=get_version("node-distance/__init__.py"),
+    version=get_version("node_distance/__init__.py"),
     description=(
         "Compute distance between all nodes of a tree, and estimate an "
         "histogram that can be used as features for other models."),
@@ -31,7 +31,8 @@ setuptools.setup(
     license='Apache License 2.0',
     packages=['node_distance'],
     install_requires=[
-        'numpy>=1.19.5,<2'
+        'numpy>=1.19.5,<2',
+        'networkx>=2.5.1,<3'
     ],
     python_requires='>=3.6',
     zip_safe=True
