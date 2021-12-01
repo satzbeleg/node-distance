@@ -6,13 +6,6 @@
 # node-distance
 Compute distance between all nodes of a tree, and estimate an histogram that can be used as features for other models.
 
-## Usage
-
-Table of Contents
-
-* [Use Case 1](#use-case-1)
-
-
 ### Toy Text Corpus
 
 ```py
