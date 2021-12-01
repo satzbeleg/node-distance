@@ -19,17 +19,20 @@ def get_version(path):
 
 
 setuptools.setup(
-    name='template_pypi',
-    version=get_version("template_pypi/__init__.py"),
-    description='lorem ipsum',
+    name='node-distance',
+    version=get_version("node-distance/__init__.py"),
+    description=(
+        "Compute distance between all nodes of a tree, and estimate an "
+        "histogram that can be used as features for other models."),
     long_description=read('README.rst'),
-    url='http://github.com/myorg/template_pypi',
-    author='John Doe',
+    url='http://github.com/satzbeleg/node-distance',
+    author='Ulf Hamster',
     author_email='554c46@gmail.com',
     license='Apache License 2.0',
-    packages=['template_pypi'],
-    install_requires=[],
-    # scripts=['scripts/examplescript.py'],
+    packages=['node_distance'],
+    install_requires=[
+        'numpy>=1.19.5,<2'
+    ],
     python_requires='>=3.6',
     zip_safe=True
 )
