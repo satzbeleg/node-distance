@@ -1,5 +1,6 @@
-[![DOI](https://zenodo.org/badge/433801845.svg)](https://zenodo.org/badge/latestdoi/433801845)
 [![PyPI version](https://badge.fury.io/py/node-distance.svg)](https://badge.fury.io/py/node-distance)
+[![PyPi downloads](https://img.shields.io/pypi/dm/node-distance)](https://img.shields.io/pypi/dm/node-distance)
+[![DOI](https://zenodo.org/badge/433801845.svg)](https://zenodo.org/badge/latestdoi/433801845)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/satzbeleg/node-distance.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/node-distance/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/satzbeleg/node-distance.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/satzbeleg/node-distance/context:python)
 
