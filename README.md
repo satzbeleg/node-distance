@@ -113,7 +113,7 @@ pip install git+ssh://git@github.com/ulf1/node-distance.git
 It is recommended to install python packages into a seperate virtual environement. (If your git repo is stored in a folder with whitespaces, then don't use the subfolder `.venv`. Use an absolute path without whitespaces.)
 
 ```sh
-python3.7 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --no-cache-dir
