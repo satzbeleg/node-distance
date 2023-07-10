@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/433801845.svg)](https://zenodo.org/badge/latestdoi/433801845)
 
 
-# node-distance
+# node-distance: Tree node distances as features
 Compute distance between all nodes of a tree, and estimate an histogram that can be used as features for other models.
 
 ### Toy Text Corpus
