@@ -24,8 +24,9 @@ setuptools.setup(
     description=(
         "Compute distance between all nodes of a tree, and estimate an "
         "histogram that can be used as features for other models."),
-    long_description=read('README.rst'),
-    url='http://github.com/satzbeleg/node-distance',
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
+    url='http://github.com/ulf1/node-distance',
     author='Ulf Hamster',
     author_email='554c46@gmail.com',
     license='Apache License 2.0',
